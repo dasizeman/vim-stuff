@@ -91,8 +91,8 @@ set pastetoggle=<F4>
 
 " Indentation settings for using 2 spaces instead of tabs.
 " Do not change 'tabstop' from its default value of 8 with this setup.
-set shiftwidth=2
-set softtabstop=2
+set shiftwidth=4
+set softtabstop=4
 set expandtab
 
 " Indentation settings for using hard tabs for indent. Display tabs as
@@ -105,16 +105,19 @@ set expandtab
 " Mappings {{{1
 "
 " Useful mappings
+"
 
 " Map <C-L> (redraw screen) to also turn off search highlighting until the
 " next search
 nnoremap <C-L> :nohl<CR><C-L>
 
 " Map tab navigation to <F2> and <F3>
-nnoremap <F2> :tabprev<CR>
-nnoremap <F3> :tabnext<CR>
-inoremap <F2> <Esc>:tabprev<CR>
-inoremap <F3> <Esc>:tabnext<CR>
+nnoremap <F2> :MBEbp<CR>
+nnoremap <F3> :MBEbn<CR>
+inoremap <F2> <Esc>:MBEbp<CR>
+inoremap <F3> <Esc>:MBEbn<CR>
+nnoremap <F5> :MBEToggle<CR>
+inoremap <F4> <Esc>:MBEToggle<CR>
 
 " New tab with Ctrl-t
 nnoremap <C-t>     :tabe<Space>
@@ -139,9 +142,18 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_cpp_check_header = 1
 let g:syntastic_cpp_auto_refresh_includes = 1
 
+let g:syntastic_python_checkers = ['python']
+
+" max text width of 80
+set tw=80
+
 
 
 "----------------------------------------------------------
 " Fix session saving
 set ssop-=options    " do not store global and local values in a session
 set ssop-=folds      " do not store folds
+
+" nerdtree
+autocmd vimenter * NERDTree
+
