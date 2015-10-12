@@ -111,17 +111,17 @@ set expandtab
 " next search
 nnoremap <C-L> :nohl<CR><C-L>
 
-" Map tab navigation to <F2> and <F3>
+" Map buffer navigation to <F2> and <F3>
 nnoremap <F2> :MBEbp<CR>
 nnoremap <F3> :MBEbn<CR>
 inoremap <F2> <Esc>:MBEbp<CR>
 inoremap <F3> <Esc>:MBEbn<CR>
-nnoremap <F5> :MBEToggle<CR>
-inoremap <F4> <Esc>:MBEToggle<CR>
 
 " New tab with Ctrl-t
 nnoremap <C-t>     :tabe<Space>
 inoremap <C-t>    <Esc>:tabe<Space> 
+
+
 "------------------------------------------------------------
 " Set the color scheme
 colors desert
@@ -149,6 +149,8 @@ set tw=80
 
 
 
+
+
 "----------------------------------------------------------
 " Fix session saving
 set ssop-=options    " do not store global and local values in a session
@@ -157,3 +159,6 @@ set ssop-=folds      " do not store folds
 " nerdtree
 autocmd vimenter * NERDTree
 
+"Don't automatically check syntax (cuz it makes loading and switching buffers
+"super slow)
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
