@@ -118,8 +118,8 @@ inoremap <F2> <Esc>:MBEbp<CR>
 inoremap <F3> <Esc>:MBEbn<CR>
 
 " New tab with Ctrl-t
-nnoremap <C-t>     :tabe<Space>
-inoremap <C-t>    <Esc>:tabe<Space> 
+"nnoremap <C-t>     :tabe<Space>
+"inoremap <C-t>    <Esc>:tabe<Space> 
 
 
 "------------------------------------------------------------
@@ -162,3 +162,7 @@ autocmd vimenter * NERDTree
 "Don't automatically check syntax (cuz it makes loading and switching buffers
 "super slow)
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
+
+" Tagbar
+nmap <F8> :TagbarToggle<CR>
+autocmd vimenter * TagbarToggle
