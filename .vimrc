@@ -107,9 +107,9 @@ set expandtab
 " Useful mappings
 "
 
-" Map <C-L> (redraw screen) to also turn off search highlighting until the
+" Map <C-V> (redraw screen) to also turn off search highlighting until the
 " next search
-nnoremap <C-L> :nohl<CR><C-L>
+nnoremap <C-V> :nohl<CR><C-L>
 
 " Map buffer navigation to <F2> and <F3>
 nnoremap <F2> :MBEbp<CR>
@@ -120,6 +120,18 @@ inoremap <F3> <Esc>:MBEbn<CR>
 " New tab with Ctrl-t
 "nnoremap <C-t>     :tabe<Space>
 "inoremap <C-t>    <Esc>:tabe<Space> 
+"
+"Toggle tagbar
+nmap <F8> :TagbarToggle<CR>
+
+" close active buffer (MBE specific, has to be more than one open)
+nmap <F5> <C-W>kd
+
+" Remap window changes
+nnoremap <C-H> <C-W>h
+nnoremap <C-J> <C-W>j
+nnoremap <C-K> <C-W>k
+nnoremap <C-L> <C-W>l
 
 
 "------------------------------------------------------------
@@ -144,10 +156,10 @@ let g:syntastic_cpp_auto_refresh_includes = 1
 
 let g:syntastic_python_checkers = ['python']
 
-" max text width of 80
-set tw=80
 
-
+"Don't automatically check syntax (cuz it makes loading and switching buffers
+"super slow)
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
 
 
 
@@ -156,13 +168,11 @@ set tw=80
 set ssop-=options    " do not store global and local values in a session
 set ssop-=folds      " do not store folds
 
-" nerdtree
+" Plugins to load on start
 autocmd vimenter * NERDTree
-
-"Don't automatically check syntax (cuz it makes loading and switching buffers
-"super slow)
-let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
-
-" Tagbar
-nmap <F8> :TagbarToggle<CR>
 autocmd vimenter * TagbarToggle
+
+
+
+" max text width of 80
+set tw=80
