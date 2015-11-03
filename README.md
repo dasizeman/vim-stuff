@@ -21,3 +21,11 @@ I will add some notes about the plugins later, for now, the only issue is:
 * Since the configuration opens multiple windows, you have to quit vim with
   * :wqa
 otherwise it throws a weird error.
+
+TODO:
+* Look into replacing YCM with NeoComplete, may work better with Cygwin and/or
+  large amounts of code.
+* See what it would take to replace ctags with gtags, since gtags offer more
+  functionality.  Then integate with vim with unite.vim and the unite-gtags
+  plugin
+* Do documentation of this configuration
