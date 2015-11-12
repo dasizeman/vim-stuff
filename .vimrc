@@ -109,7 +109,7 @@ set expandtab
 
 " Map <C-V> (redraw screen) to also turn off search highlighting until the
 " next search
-nnoremap <C-V> :nohl<CR><C-L>
+nnoremap <C-X> :nohl<CR><C-L>
 
 " Map buffer navigation to <F2> and <F3>
 nnoremap <F2> :MBEbp<CR>
@@ -171,6 +171,7 @@ set ssop-=folds      " do not store folds
 " Plugins to load on start
 autocmd vimenter * NERDTree
 autocmd vimenter * TagbarToggle
+let g:neocomplete#enable_at_startup = 1
 
 
 
