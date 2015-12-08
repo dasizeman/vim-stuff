@@ -1,27 +1,12 @@
-[submodule "bundle/minbufexpl"]
-	path = bundle/minbufexpl
-	url = https://github.com/fholgado/minibufexpl.vim.git
-[submodule "bundle/nerdtree"]
-	path = bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
-[submodule "bundle/syntastic"]
-	path = bundle/syntastic
-	url = https://github.com/scrooloose/syntastic.git
-[submodule "bundle/tagbar"]
-	path = bundle/tagbar
-	url = https://github.com/vim-scripts/Tagbar.git
-[submodule "bundle/vim-easytags"]
-	path = bundle/vim-easytags
-	url = https://github.com/xolox/vim-easytags.git
-[submodule "bundle/vim-misc"]
-	path = bundle/vim-misc
-	url = https://github.com/xolox/vim-misc.git
-[submodule "bundle/neocomplete.vim"]
-	path = bundle/neocomplete.vim
-	url = https://github.com/Shougo/neocomplete.vim.git
-[submodule "bundle/vim-surround"]
-	path = bundle/vim-surround
-	url = https://github.com/tpope/vim-surround.git
-[submodule "bundle/vim-obsession"]
-	path = bundle/vim-obsession
-	url = https://github.com/tpope/vim-obsession.git
+[submodule "tmux/tpm"]
+	path = tmux/tpm
+	url = https://github.com/tmux-plugins/tpm
+[submodule "tmux/tmux-resurrect"]
+	path = tmux/tmux-resurrect
+	url = https://github.com/tmux-plugins/tmux-resurrect.git
+[submodule "tmux/tmux-continuum"]
+	path = tmux/tmux-continuum
+	url = https://github.com/tmux-plugins/tmux-continuum.git
+[submodule "tmux/tmux-sensible"]
+	path = tmux/tmux-sensible
+	url = https://github.com/tmux-plugins/tmux-sensible.git
