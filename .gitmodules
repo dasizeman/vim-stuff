@@ -1,24 +1,24 @@
 [submodule "bundle/minbufexpl"]
 	path = bundle/minbufexpl
-	url = git@github.com:fholgado/minibufexpl.vim.git
+	url = https://github.com/fholgado/minibufexpl.vim.git
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
-	url = git@github.com:scrooloose/nerdtree.git
+	url = https://github.com/scrooloose/nerdtree.git
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
-	url = git@github.com:scrooloose/syntastic.git
+	url = https://github.com/scrooloose/syntastic.git
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
-	url = git@github.com:majutsushi/tagbar.git
+	url = https://github.com/vim-scripts/Tagbar.git
 [submodule "bundle/vim-easytags"]
 	path = bundle/vim-easytags
-	url = git@github.com:xolox/vim-easytags.git
+	url = https://github.com/xolox/vim-easytags.git
 [submodule "bundle/vim-misc"]
 	path = bundle/vim-misc
-	url = git@github.com:xolox/vim-misc.git
+	url = https://github.com/xolox/vim-misc.git
 [submodule "bundle/neocomplete.vim"]
 	path = bundle/neocomplete.vim
-	url = git@github.com:Shougo/neocomplete.vim.git
+	url = https://github.com/Shougo/neocomplete.vim.git
 [submodule "bundle/vim-surround"]
 	path = bundle/vim-surround
-	url = git@github.com:tpope/vim-surround.git
+	url = https://github.com/tpope/vim-surround.git
