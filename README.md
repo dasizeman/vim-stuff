@@ -25,7 +25,7 @@ otherwise it throws a weird error.
   to be compiled with lua support.  Either figure out how to get a version that
   is, or grab the source and configure the build yourself with this command:
   * ./configure --enable-luainterp --with-luajit --enable-fail-if-missing
-  Let me know if you need help with dependencies and whatnot.  If you don't feel
+* Let me know if you need help with dependencies and whatnot.  If you don't feel
   like compiling vim (which is understandable), you can remove the NeoComplete
   plugin from the bundle/ directory in your vim folder.
 
