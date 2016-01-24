@@ -17,14 +17,20 @@ TO INSTALL:
 And you should be good to go :)
 
 
-I will add some notes about the plugins later, for now, the only issue is:
+Things to note:
 * Since the configuration opens multiple windows, you have to quit vim with
-  * :wqa
+  * :qa
 otherwise it throws a weird error.
+* I have now switched to NeoComplete, which means that you need your vim needs
+  to be compiled with lua support.  Either figure out how to get a version that
+  is, or grab the source and configure the build yourself with this command:
+  * ./configure --enable-luainterp --with-luajit --enable-fail-if-missing
+  Let me know if you need help with dependencies and whatnot.  If you don't feel
+  like compiling vim (which is understandable), you can remove the NeoComplete
+  plugin from the bundle/ directory in your vim folder.
+
 
 TODO:
-* Look into replacing YCM with NeoComplete, may work better with Cygwin and/or
-  large amounts of code.
 * See what it would take to replace ctags with gtags, since gtags offer more
   functionality.  Then integate with vim with unite.vim and the unite-gtags
   plugin
