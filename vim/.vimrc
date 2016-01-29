@@ -133,8 +133,16 @@ nnoremap <C-J> <C-W>j
 nnoremap <C-K> <C-W>k
 nnoremap <C-L> <C-W>l
 
-" Replace all occurences of the word under the cursor (good for refactoring)
+" \s Replace all occurences of the word under the cursor (good for refactoring)
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
+
+" Yanking to the clipboard register by default seems better, so lets do that
+" Use \y to get back old behavior
+nnoremap y "+y
+nnoremap <Leader>y "0y
+
+" \p Put from clipboard register
+nnoremap <Leader>p "+p
 
 
 "------------------------------------------------------------
