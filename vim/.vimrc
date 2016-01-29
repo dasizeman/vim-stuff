@@ -136,13 +136,15 @@ nnoremap <C-L> <C-W>l
 " \s Replace all occurences of the word under the cursor (good for refactoring)
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
 
-" Yanking to the clipboard register by default seems better, so lets do that
-" Use \y to get back old behavior
+" Using clipboard register by default seems better, so lets do that
+" Prefix with \ for old register behavior
 nnoremap y "+y
 nnoremap <Leader>y "0y
+nnoremap p "+p
+nnoremap <Leader>p "0p
+nnoremap d "+d
+nnoremap <Leader>d "0d
 
-" \p Put from clipboard register
-nnoremap <Leader>p "+p
 
 
 "------------------------------------------------------------
@@ -183,11 +185,6 @@ set ssop-=folds      " do not store folds
 autocmd vimenter * NERDTree
 autocmd vimenter * TagbarToggle
 let g:neocomplete#enable_at_startup = 1
-
-augroup git-wip
-  autocmd!
-  autocmd BufWritePost * :silent !cd "`dirname "%"`" && git wip save "WIP from vim" --editor -- "`basename "%"`"
-augroup END
 
 " max text width of 80
 set tw=80
