@@ -184,7 +184,10 @@ autocmd vimenter * NERDTree
 autocmd vimenter * TagbarToggle
 let g:neocomplete#enable_at_startup = 1
 
-
+augroup git-wip
+  autocmd!
+  autocmd BufWritePost * :silent !cd "`dirname "%"`" && git wip save "WIP from vim" --editor -- "`basename "%"`"
+augroup END
 
 " max text width of 80
 set tw=80
