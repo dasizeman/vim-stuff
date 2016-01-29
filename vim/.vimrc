@@ -136,16 +136,6 @@ nnoremap <C-L> <C-W>l
 " \s Replace all occurences of the word under the cursor (good for refactoring)
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
 
-" Using clipboard register by default seems better, so lets do that
-" Prefix with \ for old register behavior
-nnoremap y "+y
-nnoremap <Leader>y "0y
-nnoremap p "+p
-nnoremap <Leader>p "0p
-nnoremap d "+d
-nnoremap <Leader>d "0d
-
-
 
 "------------------------------------------------------------
 " Set the color scheme
