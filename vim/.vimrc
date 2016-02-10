@@ -137,9 +137,6 @@ nnoremap <C-L> <C-W>l
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
 
 
-"------------------------------------------------------------
-" Set the color scheme
-colors desert
 
 "-----------------------------------------------------------
 " Detect modified files (useful for git and such)
@@ -178,3 +175,8 @@ let g:neocomplete#enable_at_startup = 1
 
 " max text width of 80
 set tw=80
+
+"------------------------------------------------------------
+" Set the color scheme
+"colors desert
+colorscheme Revolution

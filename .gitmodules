@@ -34,3 +34,6 @@
 [submodule "vim/git-wip"]
 	path = vim/git-wip
 	url = https://github.com/bartman/git-wip.git
+[submodule "vim/bundle/Revolution.vim"]
+	path = vim/bundle/Revolution.vim
+	url = https://github.com/CruizeMissile/Revolution.vim.git
