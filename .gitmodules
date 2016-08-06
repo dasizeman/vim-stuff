@@ -37,3 +37,6 @@
 [submodule "vim/bundle/Revolution.vim"]
 	path = vim/bundle/Revolution.vim
 	url = https://github.com/CruizeMissile/Revolution.vim.git
+[submodule "vim/bundle/YouCompleteMe"]
+	path = vim/bundle/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git

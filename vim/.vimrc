@@ -171,7 +171,7 @@ set ssop-=folds      " do not store folds
 " Plugins to load on start
 autocmd vimenter * NERDTree
 autocmd vimenter * TagbarToggle
-let g:neocomplete#enable_at_startup = 1
+"let g:neocomplete#enable_at_startup = 1
 
 " max text width of 80
 set tw=80
