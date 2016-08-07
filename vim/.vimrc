@@ -171,6 +171,8 @@ set ssop-=folds      " do not store folds
 " Plugins to load on start
 autocmd vimenter * NERDTree
 autocmd vimenter * TagbarToggle
+" Needed for YCM to work
+autocmd vimenter * MBEOpen
 "let g:neocomplete#enable_at_startup = 1
 
 " max text width of 80
