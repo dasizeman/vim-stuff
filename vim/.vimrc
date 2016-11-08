@@ -7,6 +7,41 @@
 " Set 'nocompatible' to ward off unexpected things that your distro might
 " have made, as well as sanely reset options when re-sourcing .vimrc
 set nocompatible
+filetype off
+
+"Vundle
+"--------------------------------------------------------------
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'vim-scripts/Tagbar'
+
+Plugin 'Valloric/YouCompleteMe'
+
+Plugin 'fholgado/minibufexpl.vim'
+
+Plugin 'scrooloose/nerdtree'
+
+Plugin 'vim-syntastic/syntastic'
+
+Plugin 'xolox/vim-easytags'
+
+Plugin 'tpope/vim-fugitive'
+
+Plugin 'xolox/vim-misc'
+
+Plugin 'tpope/vim-obsession'
+
+Plugin 'tpope/vim-surround'
+
+call vundle#end()
+
 
 " Attempt to determine the type of a file based on its name and possibly its
 " contents. Use this to allow intelligent auto-indenting for each filetype,
@@ -143,7 +178,7 @@ nnoremap <Leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
 set autoread
 "-----------------------------------------------------------
 " Sane plugin loading (plugin)
-execute pathogen#infect()
+"execute pathogen#infect()
 "----------------------------------------------------------
 " gcc syntax checker
 let g:syntastic_enable_signs = 1
@@ -180,5 +215,4 @@ set tw=80
 
 "------------------------------------------------------------
 " Set the color scheme
-"colors desert
-colorscheme Revolution
+colors desert
