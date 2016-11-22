@@ -42,6 +42,8 @@ Plugin 'tpope/vim-surround'
 
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
+Plugin 'fatih/vim-go'
+
 call vundle#end()
 
 
@@ -144,7 +146,7 @@ set expandtab
 " Useful mappings
 "
 
-" Map <C-V> (redraw screen) to also turn off search highlighting until the
+" Map <C-X> (redraw screen) to also turn off search highlighting until the
 " next search
 nnoremap <C-X> :nohl<CR><C-L>
 
@@ -153,6 +155,11 @@ nnoremap <F2> :MBEbp<CR>
 nnoremap <F3> :MBEbn<CR>
 inoremap <F2> <Esc>:MBEbp<CR>
 inoremap <F3> <Esc>:MBEbn<CR>
+
+" FZF with Ctrl O
+nnoremap <C-O> :FZF<CR>
+inoremap <C-O> :FZF<CR>
+
 
 " New tab with Ctrl-t
 "nnoremap <C-t>     :tabe<Space>
@@ -222,10 +229,35 @@ let g:syntastic_cpp_auto_refresh_includes = 1
 
 let g:syntastic_python_checkers = ['python']
 
+let g:syntastic_go_checkers = ['go', 'golint', 'govet']
+
 
 "Don't automatically check syntax (cuz it makes loading and switching buffers
 "super slow)
-let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
+"let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+" ---------------------------
+
+" vim-go
+" -----------------------
+"let g:go_list_type = "quickfix"
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_types = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+let g:go_fmt_command = "goimports"
+"let g:go_metalinter_autosave = 1
+"let g:go_metalinter_autosave_enabled = ['vet', 'golint', 'errcheck']
+"
+"
+
+" eclim
+let g:EclimCompletionMethod = 'omnifunc'
+
+" fzf
+let g:fzf_files_options = '--black'
+
 
 
 
