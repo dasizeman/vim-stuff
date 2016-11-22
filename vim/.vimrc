@@ -40,6 +40,8 @@ Plugin 'tpope/vim-obsession'
 
 Plugin 'tpope/vim-surround'
 
+Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+
 call vundle#end()
 
 
@@ -159,6 +161,35 @@ inoremap <F3> <Esc>:MBEbn<CR>
 "Toggle tagbar
 nmap <F8> :TagbarToggle<CR>
 
+" gotags in Tagbar
+let g:tagbar_type_go = {
+    \ 'ctagstype' : 'go',
+    \ 'kinds'     : [
+        \ 'p:package',
+        \ 'i:imports:1',
+        \ 'c:constants',
+        \ 'v:variables',
+        \ 't:types',
+        \ 'n:interfaces',
+        \ 'w:fields',
+        \ 'e:embedded',
+        \ 'm:methods',
+        \ 'r:constructor',
+        \ 'f:functions'
+    \ ],
+    \ 'sro' : '.',
+    \ 'kind2scope' : {
+        \ 't' : 'ctype',
+        \ 'n' : 'ntype'
+    \ },
+    \ 'scope2kind' : {
+        \ 'ctype' : 't',
+        \ 'ntype' : 'n'
+    \ },
+    \ 'ctagsbin'  : 'gotags',
+    \ 'ctagsargs' : '-sort -silent'
+\ }
+
 " close active buffer (MBE specific, has to be more than one open)
 nmap <F5> <C-W>kd
 
@@ -204,7 +235,7 @@ set ssop-=options    " do not store global and local values in a session
 set ssop-=folds      " do not store folds
 
 " Plugins to load on start
-autocmd vimenter * NERDTree
+"autocmd vimenter * NERDTree
 autocmd vimenter * TagbarToggle
 " Needed for YCM to work
 autocmd vimenter * MBEOpen
