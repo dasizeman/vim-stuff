@@ -11,8 +11,9 @@ $ cd bundle/YouCompleteMe/
 $ ./install.py --clang-completer --gocode-completer
 ```
 Gotchas:
-For gocode to work in ycm, you need $GOROOT and $GOPATH set, as well as $GOOS
-and $GOARCH such that `$GOPATH/pkg/$GOOS_$GOARCH` is where your packages live
+
+For gocode to work in ycm, you need `$GOROOT` and `$GOPATH` set, as well as `$GOOS`
+and `$GOARCH` such that `$GOPATH/pkg/$GOOS_$GOARCH` is where your packages live
 
 Donezo funzo.
 
