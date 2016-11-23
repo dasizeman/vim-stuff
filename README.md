@@ -1,33 +1,19 @@
 TO INSTALL:
-* recursively clone this repo somewhere:
-  * $git clone --recursive https://github.com/dasizeman/vim-stuff
-* make sure you have a ~/.vim directory
-  * $mkdir -p ~/.vim
-* cd to the repo you just cloned
-  * $cd vim-stuff
-* copy the .vimrc to your home directory (THIS WILL OVERWRITE ANY CURRENT .vimrc
-  SO BACK IT UP FIRST IF YOU WANT)
-  * $cp .vimrc ~
-* copy the autoload and bundle directories to your ~/.vim folder
-  NOTE: If you already had stuff in your ~/.vim directory you will have to figure
-  out what you want to do.  Basically autoload/ just contains the pathogen.vim
-  plugin loader, and bundle contains the cloned repos of all the plugins I'm using
-  * $cp -r autoload/ bundle/ ~/.vim/
+  $ sudo apt install vim-gtk3-py2
+  $ mkdir -p ~/.vim && cd ~/.vim
+  $ git clone --recursive https://github.com/dasizeman/vim-stuff.git
+  $ mv .vimrc .gvimrc ~
+  $ vim
+  : PluginInstall
+  : qa
+  $ cd bundle/YouCompleteMe/
+  $ ./install.py --clang-completer --gocode-completer
 
-And you should be good to go :)
+Gotchas:
+For gocode to work in ycm, you need $GOROOT and $GOPATH set, as well as $GOOS
+and $GOARCH such that `$GOPATH/pkg/$GOOS_$GOARCH` is where your packages live
 
-
-Things to note:
-* Since the configuration opens multiple windows, you have to quit vim with
-  * :qa
-otherwise it throws a weird error.
-* I have now switched to NeoComplete, which means that you need your vim needs
-  to be compiled with lua support.  Either figure out how to get a version that
-  is, or grab the source and configure the build yourself with this command:
-  * ./configure --enable-luainterp --with-luajit --enable-fail-if-missing
-* Let me know if you need help with dependencies and whatnot.  If you don't feel
-  like compiling vim (which is understandable), you can remove the NeoComplete
-  plugin from the bundle/ directory in your vim folder.
+Donezo funzo.
 
 
 TODO:
