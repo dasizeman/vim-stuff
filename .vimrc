@@ -44,6 +44,9 @@ Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 Plugin 'fatih/vim-go'
 
+Plugin 'albertocg/contrastneed-theme'
+
+
 call vundle#end()
 
 
@@ -132,12 +135,7 @@ set pastetoggle=<F4>
 " Do not change 'tabstop' from its default value of 8 with this setup.
 set shiftwidth=4
 set softtabstop=4
-set expandtab
-
-" Indentation settings for using hard tabs for indent. Display tabs as
-" two characters wide.
-"set shiftwidth=2
-"set tabstop=2
+"set expandtab
 
 
 "------------------------------------------------------------
@@ -229,7 +227,7 @@ let g:syntastic_cpp_auto_refresh_includes = 1
 
 let g:syntastic_python_checkers = ['python']
 
-let g:syntastic_go_checkers = ['go', 'golint', 'govet']
+let g:syntastic_go_checkers = ['go', 'gofmt', 'golint']
 
 
 "Don't automatically check syntax (cuz it makes loading and switching buffers
@@ -246,14 +244,14 @@ let g:go_highlight_fields = 1
 let g:go_highlight_types = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
-let g:go_fmt_command = "goimports"
 "let g:go_metalinter_autosave = 1
 "let g:go_metalinter_autosave_enabled = ['vet', 'golint', 'errcheck']
 "
 "
-
+" easytags
+let g:easytags_async = 1
 " eclim
-let g:EclimCompletionMethod = 'omnifunc'
+"let g:EclimCompletionMethod = 'omnifunc'
 
 " fzf
 let g:fzf_files_options = '--black'
@@ -278,4 +276,4 @@ set tw=80
 
 "------------------------------------------------------------
 " Set the color scheme
-colors desert
+colors lyla
