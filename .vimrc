@@ -131,12 +131,17 @@ set pastetoggle=<F4>
 "
 " Indentation settings according to personal preference.
 
-" Indentation settings for using 2 spaces instead of tabs.
-" Do not change 'tabstop' from its default value of 8 with this setup.
-set shiftwidth=4
-set softtabstop=4
-"set expandtab
 
+set tabstop=4       " The width of a TAB is set to 4.
+                    " Still it is a \t. It is just that
+                    " Vim will interpret it to be having
+                    " a width of 4.
+
+set shiftwidth=4    " Indents will have a width of 4
+
+set softtabstop=4   " Sets the number of columns for a TAB
+
+set expandtab       " Expand TABs to spaces
 
 "------------------------------------------------------------
 " Mappings {{{1
@@ -159,6 +164,9 @@ nnoremap <C-O> :FZF<CR>
 inoremap <C-O> :FZF<CR>
 
 
+" Apply YCM's FixIt suggestion
+nnoremap <F9> :YcmCompleter FixIt<CR>
+inoremap <F9> :YcmCompleter FixIt<CR>
 " New tab with Ctrl-t
 "nnoremap <C-t>     :tabe<Space>
 "inoremap <C-t>    <Esc>:tabe<Space> 
@@ -229,6 +237,8 @@ let g:syntastic_python_checkers = ['python']
 
 let g:syntastic_go_checkers = ['go', 'gofmt', 'golint']
 
+let g:syntastic_c_checkers = ['gcc']
+
 
 "Don't automatically check syntax (cuz it makes loading and switching buffers
 "super slow)
@@ -272,8 +282,9 @@ autocmd vimenter * MBEOpen
 "let g:neocomplete#enable_at_startup = 1
 
 " max text width of 80
-set tw=80
+set textwidth=80
 
 "------------------------------------------------------------
 " Set the color scheme
-colors lyla
+set termguicolors
+colorscheme monrovia
