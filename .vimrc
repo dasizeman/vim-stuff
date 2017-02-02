@@ -286,5 +286,4 @@ set textwidth=80
 
 "------------------------------------------------------------
 " Set the color scheme
-set termguicolors
 colorscheme monrovia
