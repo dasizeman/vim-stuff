@@ -44,7 +44,9 @@ Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 Plugin 'fatih/vim-go'
 
-Plugin 'albertocg/contrastneed-theme'
+Plugin 'stannous/vim-claritybeauty'
+
+Plugin 'airblade/vim-gitgutter'
 
 
 call vundle#end()
@@ -129,20 +131,7 @@ set pastetoggle=<F4>
 "------------------------------------------------------------
 " Indentation options {{{1
 "
-" Indentation settings according to personal preference.
-
-
-set tabstop=4       " The width of a TAB is set to 4.
-                    " Still it is a \t. It is just that
-                    " Vim will interpret it to be having
-                    " a width of 4.
-
-set shiftwidth=4    " Indents will have a width of 4
-
-set softtabstop=4   " Sets the number of columns for a TAB
-
-set expandtab       " Expand TABs to spaces
-
+set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 "------------------------------------------------------------
 " Mappings {{{1
 "
@@ -154,10 +143,8 @@ set expandtab       " Expand TABs to spaces
 nnoremap <C-X> :nohl<CR><C-L>
 
 " Map buffer navigation to <F2> and <F3>
-nnoremap <F2> :MBEbp<CR>
-nnoremap <F3> :MBEbn<CR>
-inoremap <F2> <Esc>:MBEbp<CR>
-inoremap <F3> <Esc>:MBEbn<CR>
+nnoremap , :MBEbp<CR>
+nnoremap . :MBEbn<CR>
 
 " FZF with Ctrl O
 nnoremap <C-O> :FZF<CR>
@@ -286,4 +273,5 @@ set textwidth=80
 
 "------------------------------------------------------------
 " Set the color scheme
-colorscheme monrovia
+colorscheme claritybeauty
+set term=screen-256color
