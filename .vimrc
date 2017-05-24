@@ -263,6 +263,7 @@ set ssop-=folds      " do not store folds
 
 " Plugins to load on start
 "autocmd vimenter * NERDTree
+let NERDTreeIgnore = ['\.pyc$']
 autocmd vimenter * TagbarToggle
 " Needed for YCM to work
 autocmd vimenter * MBEOpen
@@ -275,3 +276,5 @@ set textwidth=80
 " Set the color scheme
 colorscheme claritybeauty
 set term=screen-256color
+
+"set clipboard=unnamed
