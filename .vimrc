@@ -28,8 +28,6 @@ Plugin 'fholgado/minibufexpl.vim'
 
 Plugin 'scrooloose/nerdtree'
 
-Plugin 'vim-syntastic/syntastic'
-
 Plugin 'xolox/vim-easytags'
 
 Plugin 'tpope/vim-fugitive'
@@ -47,6 +45,8 @@ Plugin 'fatih/vim-go'
 Plugin 'stannous/vim-claritybeauty'
 
 Plugin 'airblade/vim-gitgutter'
+
+Plugin 'vim-syntastic/syntastic'
 
 
 call vundle#end()
@@ -220,7 +220,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_cpp_check_header = 1
 let g:syntastic_cpp_auto_refresh_includes = 1
 
-let g:syntastic_python_checkers = ['python']
+let g:syntastic_python_checkers = ['flake8']
 
 let g:syntastic_go_checkers = ['go', 'gofmt', 'golint']
 
